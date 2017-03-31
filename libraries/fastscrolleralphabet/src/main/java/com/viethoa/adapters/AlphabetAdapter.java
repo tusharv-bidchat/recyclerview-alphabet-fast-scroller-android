@@ -66,11 +66,11 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
         }
 
         public void bind(final AlphabetItem alphabetItem, final int position) {
-            if (alphabetItem == null || alphabetItem.word == null)
+            if (alphabetItem == null || alphabetItem.value == null)
                 return;
 
             // Text
-            tvWord.setText(alphabetItem.word);
+            tvWord.setText(alphabetItem.key);
             // Style
             tvWord.setTypeface(null, alphabetItem.isActive ? Typeface.BOLD : Typeface.NORMAL);
             // Text color

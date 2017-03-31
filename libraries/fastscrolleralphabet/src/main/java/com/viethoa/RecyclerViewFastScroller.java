@@ -135,7 +135,7 @@ public class RecyclerViewFastScroller extends LinearLayout implements
 
                     // This is your pressed view
                     if (rect.contains(x, y)) {
-                        LinearLayoutManager layoutManager = ((LinearLayoutManager)alphabetRecyclerView.getLayoutManager());
+                        LinearLayoutManager layoutManager = ((LinearLayoutManager) alphabetRecyclerView.getLayoutManager());
                         int firstVisiblePosition = layoutManager.findFirstVisibleItemPosition();
                         int position = i + firstVisiblePosition;
                         performSelectedAlphabetWord(position);
@@ -244,11 +244,11 @@ public class RecyclerViewFastScroller extends LinearLayout implements
 
         for (int i = 0; i < alphabets.size(); i++) {
             AlphabetItem alphabetItem = alphabets.get(i);
-            if (alphabetItem == null || alphabetItem.word.trim().isEmpty()) {
+            if (alphabetItem == null || alphabetItem.value.trim().isEmpty()) {
                 continue;
             }
 
-            if (alphabetItem.word.equals(bubbleText)) {
+            if (alphabetItem.value.equals(bubbleText)) {
                 performSelectedAlphabetWord(i);
                 alphabetRecyclerView.smoothScrollToPosition(i);
                 break;

@@ -53,7 +53,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         if (name == null || name.length() < 1)
             return null;
 
-        return mDataArray.get(pos).substring(0, 1);
+        return mDataArray.get(pos);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

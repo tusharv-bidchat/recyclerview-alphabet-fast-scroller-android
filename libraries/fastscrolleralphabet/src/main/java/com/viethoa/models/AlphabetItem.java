@@ -6,12 +6,14 @@ package com.viethoa.models;
 public class AlphabetItem {
 
     public int position;
-    public String word;
+    public String key;
+    public String value;
     public boolean isActive;
 
-    public AlphabetItem(int pos, String word, boolean isActive) {
+    public AlphabetItem(int pos, String key, String value, boolean isActive) {
         this.position = pos;
-        this.word = word;
+        this.key = key;
+        this.value = value;
         this.isActive = isActive;
     }
 }
